@@ -1,7 +1,7 @@
 /**
  * TypeWriterPlus.js v1.0.0
- * A lightweight, customizable typing animation library
- * https://github.com/reddeath/typewriterplus
+ * A lightweight, customizable typing animation library that supports multiple elements and advanced text animations.
+ *  https://github.com/owesis/typewriter-plus.git
  *
  * Licensed under MIT License
  * Copyright (c) 2025 TypeWriterPlus
@@ -172,6 +172,8 @@ class TypeWriterPlus {
         return new TypeWriterPlus(selector, options).create();
     }
 }
+// For ES module environments
+export default TypeWriterPlus;
 
 // For CommonJS environments
 if (typeof module !== 'undefined' && module.exports) {

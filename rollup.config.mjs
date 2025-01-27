@@ -2,7 +2,7 @@ import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 
 export default [
     // UMD build for browsers
@@ -12,31 +12,31 @@ export default [
             name: 'TypeWriterPlus',
             file: pkg.browser,
             format: 'umd',
-            exports: 'default'
+            exports: 'default',
         },
         plugins: [
             resolve(),
             commonjs(),
             babel({
                 babelHelpers: 'bundled',
-                exclude: 'node_modules/**'
+                exclude: 'node_modules/**',
             }),
-            terser()
-        ]
+            terser(),
+        ],
     },
     // ESM build
     {
         input: 'src/index.js',
         output: {
             file: pkg.module,
-            format: 'es'
+            format: 'es',
         },
         plugins: [
             babel({
                 babelHelpers: 'bundled',
-                exclude: 'node_modules/**'
-            })
-        ]
+                exclude: 'node_modules/**',
+            }),
+        ],
     },
     // CommonJS build
     {
@@ -44,13 +44,13 @@ export default [
         output: {
             file: pkg.main,
             format: 'cjs',
-            exports: 'default'
+            exports: 'default',
         },
         plugins: [
             babel({
                 babelHelpers: 'bundled',
-                exclude: 'node_modules/**'
-            })
-        ]
-    }
+                exclude: 'node_modules/**',
+            }),
+        ],
+    },
 ];

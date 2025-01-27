@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Owesis</title>
+</head>
+<body>
+<div class="type-text" data-type='["First sentence.", "Second sentence."]'></div>
+
+<script src="../dist/typewriter-plus.min.js"></script>
+<script>
+    new TypeWriterPlus('[data-type]', {
+        speed: 90,
+        deleteSpeed: 50,
+        pauseBetweenSentences: 1000,
+        loop: true,
+        cursor: true,
+        cursorColor: '#0066cc',
+        textColor: '#333333',
+        textSize: '16px',
+        cursorSize: '18px'
+    }).create();
+</script>
+</body>
+</html>

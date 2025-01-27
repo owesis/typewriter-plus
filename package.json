@@ -6,6 +6,7 @@
   "module": "dist/typewriter-plus.esm.js",
   "browser": "dist/typewriter-plus.min.js",
   "types": "types/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -35,14 +36,16 @@
   },
   "homepage": "https://github.com/owesis/typewriterplus#readme",
   "devDependencies": {
-    "@babel/core": "^7.23.0",
-    "@babel/preset-env": "^7.22.20",
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "babel-jest": "^29.7.0",
     "eslint": "^8.51.0",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.0.3",
     "rollup": "^4.1.4"
   },
